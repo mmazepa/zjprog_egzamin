@@ -10,94 +10,44 @@
 
 **Założenia wstępne**
 
-Kod opisujący jakieś punkty na wykresie i coś,
-co można z nimi zrobić (np. liczyć odległości
-między punktami), jednak cały umieszczony w
-jednej klasie, w nieszczęsnym Main'ie. Punkty
-zadeklarowane "na sztywno" np. jako zmienne
-globalne czy coś takiego. Dużo niepotrzebnych
-zmiennych. Może jakieś "brzydkie" metody
-dublujące się wzajemnie, czy coś w ten deseń.
+Kod opisujący jakieś punkty na wykresie i coś, co można z nimi zrobić
+(np. liczyć odległości między punktami), jednak cały umieszczony w jednej
+klasie, w nieszczęsnym Main'ie. Punkty zadeklarowane "na sztywno" np. jako
+zmienne globalne czy coś takiego. Dużo niepotrzebnych zmiennych. Może jakieś
+"brzydkie" metody dublujące się wzajemnie, czy coś w ten deseń.
 
 **Refaktoryzacja**
 
-Refaktoryzacja ma przebiegać według
-następujących kroków (ich kolejność należy
-rozważyć, jeżeli w innej permutacji wyjdzie
-sensowniejszy proces refaktoryzacji).
+Refaktoryzacja ma przebiegać według następujących kroków (ich kolejność należy
+rozważyć, jeżeli w innej permutacji wyjdzie sensowniejszy proces refaktoryzacji).
 
 **(1) Rename Variable:**
 
-Pozamieniać wszystkie niewiele mówiące
-nazwy zmiennych na bardziej sensowne, po
+Pozamieniać wszystkie niewiele mówiące nazwy zmiennych na bardziej sensowne, po
 których będzie widać, do czego służą.
 
 **(2) Extract Method:**
 
-Cały wielki zbity kod podzielić na drobne,
-powtarzalne segmenty i wyciągnąć do
-osobnych metod - zgodnie z rozsądkiem.
-Ładne metody wywołać w Main'ie - teraz kod
-jest nieco bardziej czytelny.
+Cały wielki zbity kod podzielić na drobne, powtarzalne segmenty i wyciągnąć do
+osobnych metod - zgodnie z rozsądkiem. Ładne metody wywołać w Main'ie - teraz
+kod jest nieco bardziej czytelny.
 
 **(3) Return Modified Value:**
 
-Niech wszystkie metody, które wpływają w
-jakiś sposób na dane zwracają zmodyfikowaną
-wartość (return).
+Niech wszystkie metody, które wpływają w jakiś sposób na dane zwracają
+zmodyfikowaną wartość (return).
 
-**(4) Replace Query with Parameter:**
+**(4) Inline Variable:**
 
-Jeżeli w metodzie tworzymy zmienną, którą
-równie dobrze możemy stworzyć w miejscu jej
-wywołania - zróbmy to. Wstawmy ją do
-wywoływanej metody jako parametr.
+Generalna Idea Przykładowo, jeśli metoda przed zwróceniem wartości przechowuje
+ją w zmiennej, której później do niczego nie używamy – zmienna nie jest nam
+potrzebna. Niech metoda od razu zwraca wartość, którą ma zwracać.
 
-**(5) Inline Variable:**
+**(5) Combine Functions into Class:**
 
-Generalna Idea Przykładowo, jeśli metoda przed zwróceniem
-wartości przechuje ją w zmiennej, której
-później do niczego nie używamy – zmienna nie
-jest nam potrzebna. Niech metoda od razu
-zwraca wartość, którą ma zwracać.
-
-**(6) Change Function Declaration:**
-
-Wszelkie nieoczywiste lub błędnie nazwane
-funkcje/metody poprawić na oczywiste
-(nazwa powinna dokładnie określać, za co
-dana metoda jest odpowiedzialna).
-
-**(7) Combine Functions into Class:**
-
-Wyodrębnić wszystkie "globalne punkty" jako
-osobną klasę "Punkt" zawierającą własny
-konstruktor i metody (przede wszystkim
-gettery i settery).
-
-**(8) Replace Error Code with Exception:**
-
-Wyszukać wszelkie miejsca, gdzie program się
-"wykrzacza" (ma możliwość wykonania,
-zwrócenia kodu z błędem, niemożliwego do
-wykonania) i zastąpić obsługą wyjątków
-(throw Exception).
-
-**(9) Consolidate Conditional Expression:**
-
-Jeżeli kilka if'ów pod rząd zwraca jedną i tą
-samą wartość - połączyć je. Zamiast kilku if'ów
-rozważyć np. alternatywę warunków.
-
-**(10) Remove Dead Code:**
-
-Usunąć wszystkie niepotrzebne linijki kodu,
-które po wcześniejszych zmianach (lub od
-samego początku) były nieosiągalne, np.
-wnętrze części instrukcji warunkowych if-else
-wykluczonych przez inne warunki.
+Wyodrębnić wszystkie "globalne punkty" jako osobną klasę "Punkt" zawierającą
+własny konstruktor i metody (przede wszystkim gettery i settery).
 
 **Podsumowanie**
 
-Podsumować, że kod się poprawił, że jest
-lepszy, czytelniejszy i inne takie.
+Podsumować, że kod się poprawił, że jest lepszy, czytelniejszy i inne takie.
