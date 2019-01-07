@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+diff mytest output_test > empty
+
+if [ -s empty ]
+then
+	echo "Test FAILED"
+else
+	echo "Test PASSED"
+fi
+rm empty
