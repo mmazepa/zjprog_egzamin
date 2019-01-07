@@ -25,6 +25,7 @@ rozważyć, jeżeli w innej permutacji wyjdzie sensowniejszy proces refaktoryzac
 
 Początkowy kod do refaktoryzacji.
 
+image::images/code/code00.png[]
 image::images/lizard/00.png[]
 
 **(1) Rename Variable:**
@@ -32,6 +33,7 @@ image::images/lizard/00.png[]
 Pozamieniać wszystkie niewiele mówiące nazwy zmiennych na bardziej sensowne, po
 których będzie widać, do czego służą.
 
+image::images/code/code01.png[]
 image::images/lizard/01.png[]
 
 **(2) Extract Method:**
@@ -40,6 +42,8 @@ Cały wielki zbity kod podzielić na drobne, powtarzalne segmenty i wyciągnąć
 osobnych metod - zgodnie z rozsądkiem. Ładne metody wywołać w Main'ie - teraz
 kod jest nieco bardziej czytelny.
 
+image::images/code/code02a.png[]
+image::images/code/code02b.png[]
 image::images/lizard/02.png[]
 
 **(3) Return Modified Value:**
@@ -47,6 +51,7 @@ image::images/lizard/02.png[]
 Niech wszystkie metody, które wpływają w jakiś sposób na dane zwracają
 zmodyfikowaną wartość (return).
 
+image::images/code/code03.png[]
 image::images/lizard/03.png[]
 
 **(4) Inline Variable:**
@@ -55,6 +60,7 @@ Generalna Idea Przykładowo, jeśli metoda przed zwróceniem wartości przechowu
 ją w zmiennej, której później do niczego nie używamy – zmienna nie jest nam
 potrzebna. Niech metoda od razu zwraca wartość, którą ma zwracać.
 
+image::images/code/code04.png[]
 image::images/lizard/04.png[]
 
 **(5) Combine Functions into Class:**
@@ -62,6 +68,8 @@ image::images/lizard/04.png[]
 Wyodrębnić wszystkie "globalne punkty" jako osobną klasę "Punkt" zawierającą
 własny konstruktor i metody (przede wszystkim gettery i settery).
 
+image::images/code/code05a.png[]
+image::images/code/code05b.png[]
 image::images/lizard/05.png[]
 
 **Podsumowanie**

@@ -16,21 +16,21 @@ public class EuclideanDistance {
   private static double d_2_3;
 
   public static void main(String[] args) {
-    double p1x = 5.21;
-    double p1y = -7.32;
-    double p2x = -0.13;
-    double p2y = 3.14;
-    double p3x = -4.71;
-    double p3y = -8.41;
-    double pow_1_2x = Math.pow(p1x - p2x, 2);
-    double pow_1_2y = Math.pow(p1y - p2y, 2);
-    double pow_1_3x = Math.pow(p1x - p3x, 2);
-    double pow_1_3y = Math.pow(p1y - p3y, 2);
-    double pow_2_3x = Math.pow(p2x - p3x, 2);
-    double pow_2_3y = Math.pow(p2y - p3y, 2);
-    double d_1_2 = Math.sqrt(pow_1_2x + pow_1_2y);
-    double d_1_3 = Math.sqrt(pow_1_3x + pow_1_3y);
-    double d_2_3 = Math.sqrt(pow_2_3x + pow_2_3y);
+    p1x = 5.21;
+    p1y = -7.32;
+    p2x = -0.13;
+    p2y = 3.14;
+    p3x = -4.71;
+    p3y = -8.41;
+    pow_1_2x = Math.pow(p1x - p2x, 2);
+    pow_1_2y = Math.pow(p1y - p2y, 2);
+    pow_1_3x = Math.pow(p1x - p3x, 2);
+    pow_1_3y = Math.pow(p1y - p3y, 2);
+    pow_2_3x = Math.pow(p2x - p3x, 2);
+    pow_2_3y = Math.pow(p2y - p3y, 2);
+    d_1_2 = Math.sqrt(pow_1_2x + pow_1_2y);
+    d_1_3 = Math.sqrt(pow_1_3x + pow_1_3y);
+    d_2_3 = Math.sqrt(pow_2_3x + pow_2_3y);
     System.out.println("Euclidean Distance rounded to 2 decimal places.");
     System.out.println("P1 = (" + p1x + ", " + p1y + ")");
     System.out.println("P2 = (" + p2x + ", " + p2y + ")");
