@@ -29,9 +29,7 @@ public class Line {
   }
 
   public double calculateDistance() {
-    return Math.sqrt(Math.pow(this.point1.getX() - this.point2.getX(), 2) + Math.pow(this.point1.getY() - this.point2.getY(), 2));
+    return Math.sqrt(Math.pow(this.point1.getX() - this.point2.getX(), 2) 
+          + Math.pow(this.point1.getY() - this.point2.getY(), 2));
   }
-
-
-  
 }
