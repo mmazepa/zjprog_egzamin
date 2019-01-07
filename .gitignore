@@ -11,3 +11,8 @@
 *.zip
 *.tar.gz
 *.rar
+
+# Ignore work files
+.vscode
+.~*
+
