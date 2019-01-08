@@ -109,6 +109,7 @@ tabelka...
 | (9) Nowe zależności and Liskov   | 100    | 29      |  3.45
 | (10) Interface Segregation       | 103    | 30      |  3.43
 | (11) Code Smells                 | 103    | 30      |  3.43
+| (12) Code Smells                 | 103    | 31      |  3.32
 |============================================================
 
 **Metryki CKJM**
