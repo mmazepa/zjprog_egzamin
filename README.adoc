@@ -100,6 +100,9 @@ Podsumować, że kod się poprawił, że jest lepszy, czytelniejszy i inne takie
 | (6) Add Line Class               | 54     | 17      |  3.18
 | (7) Open Close                   | 56     | 17      |  3.29
 | (8) Open Close 2                 | 55     | 17      |  3.24
+| (9) Nowe zależności and Liskov   | 100    | 29      |  3.45
+| (10) Interface Segregation       | 103    | 30      |  3.43
+| (11) Code Smells                 | 103    | 30      |  3.43
 |============================================================
 
 **Metryki CKJM**
