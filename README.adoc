@@ -72,9 +72,37 @@ image::images/code/code05a.png[]
 image::images/code/code05b.png[]
 image::images/lizard/05.png[]
 
+**(6) Add Line Class:**
+
+image::images/lizard/06.png[]
+
+**(7) Open Close:**
+
+image::images/lizard/07.png[]
+
+**(8) Open Close 2:**
+
+image::images/lizard/08.png[]
+
 **Podsumowanie**
 
 Podsumować, że kod się poprawił, że jest lepszy, czytelniejszy i inne takie.
+
+**Statystyki**
+
+[options="header"]
+|===========================================================
+| Etap                             | Liniki | Metody | Ratio
+| (0) Code to repair               | 27     | 1      | 27.00
+| (1) Rename Variable              | 27     | 1      | 27.00
+| (2) Extract Method               | 33     | 4      |  8.25
+| (3) Return Modified Value        | 27     | 4      |  6.75
+| (4) Inline Variable              | 24     | 4      |  6.00
+| (5) Combine Functions into Class | 37     | 11     |  3.36
+| (6) Add Line Class               | 54     | 17     |  3.18
+| (7) Open Close                   | 56     | 17     |  3.29
+| (8) Open Close 2                 | 55     | 17     |  3.24
+|===========================================================
 
 **Metryki CKJM**
 
@@ -88,4 +116,13 @@ Podsumować, że kod się poprawił, że jest lepszy, czytelniejszy i inne takie
 | (4) Inline Variable              | EuclideanDistance | 5   | 1   | 0   | 0   | 15  | 8    | 0  | 5
 | (5) Combine Functions into Class | Point             | 6   | 1   | 0   | 0   | 7   | 3    | 0  | 6
 | (5) Combine Functions into Class | EuclideanDistance | 7   | 1   | 0   | 1   | 20  | 19   | 0  | 6
+| (6) Add Line Class               | Point             | 6   | 1   | 0   | 0   | 7   | 3    | 0  | 6
+| (6) Add Line Class               | Line              | 6   | 1   | 0   | 1   | 7   | 3    | 0  | 6
+| (6) Add Line Class               | EuclideanDistance | 7   | 1   | 0   | 1   | 20  | 19   | 0  | 6
+| (7) Open Close                   | Point             | 6   | 1   | 0   | 0   | 7   | 3    | 0  | 6
+| (7) Open Close                   | Line              | 8   | 1   | 0   | 1   | 18  | 0    | 0  | 8
+| (7) Open Close                   | EuclideanDistance | 5   | 1   | 0   | 2   | 13  | 8    | 0  | 4
+| (8) Open Close 2                 | Point             | 6   | 1   | 0   | 0   | 7   | 3    | 0  | 6
+| (8) Open Close 2                 | Line              | 10  | 1   | 0   | 1   | 22  | 11   | 0  | 10
+| (8) Open Close 2                 | EuclideanDistance | 3   | 1   | 0   | 2   | 8   | 1    | 0  | 2
 |======================================================================================================
