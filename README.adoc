@@ -88,6 +88,12 @@ Podsumować, że kod się poprawił, że jest lepszy, czytelniejszy i inne takie
 
 **Statystyki**
 
+obrazek tabelki...
+
+image::images/stats.png[]
+
+tabelka...
+
 [options="header"]
 |============================================================
 | Step                             | Lines  | Methods | Ratio
