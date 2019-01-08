@@ -10,16 +10,14 @@
 
 **Założenia wstępne**
 
-Kod opisujący jakieś punkty na wykresie i coś, co można z nimi zrobić
-(np. liczyć odległości między punktami), jednak cały umieszczony w jednej
-klasie, w nieszczęsnym Main'ie. Punkty zadeklarowane "na sztywno" np. jako
-zmienne globalne czy coś takiego. Dużo niepotrzebnych zmiennych. Może jakieś
-"brzydkie" metody dublujące się wzajemnie, czy coś w ten deseń.
+Kod opisuje punkty na wykresie i coś, co można z nimi zrobić (np. liczyć
+odległości między tymi punktami), jednak cały umieszczony jest w jednej
+klasie, w nieszczęsnym Main'ie. Punkty zadeklarowane "na sztywno" jako
+zmienne globalne. Dużo niepotrzebnych zmiennych.
 
 **Refaktoryzacja**
 
-Refaktoryzacja ma przebiegać według następujących kroków (ich kolejność należy
-rozważyć, jeżeli w innej permutacji wyjdzie sensowniejszy proces refaktoryzacji).
+Refaktoryzacja przebiega według następujących kroków.
 
 **(0) Code to repair:**
 
@@ -30,17 +28,17 @@ image::images/lizard/00.png[]
 
 **(1) Rename Variable:**
 
-Pozamieniać wszystkie niewiele mówiące nazwy zmiennych na bardziej sensowne, po
-których będzie widać, do czego służą.
+Wszystkie niewiele mówiące nazwy zmiennych zostają zmienione na bardziej
+sensowne, po których będzie widać, do czego służą.
 
 image::images/code/code01.png[]
 image::images/lizard/01.png[]
 
 **(2) Extract Method:**
 
-Cały wielki zbity kod podzielić na drobne, powtarzalne segmenty i wyciągnąć do
-osobnych metod - zgodnie z rozsądkiem. Ładne metody wywołać w Main'ie - teraz
-kod jest nieco bardziej czytelny.
+Podział całego wielkiego zbitego kodu na drobne, powtarzalne segmenty
+i wyciągnięcie do osobnych metod - zgodnie z rozsądkiem. Ładne metody
+trafiają do Main'a - teraz kod jest nieco bardziej czytelny.
 
 image::images/code/code02a.png[]
 image::images/code/code02b.png[]
@@ -48,7 +46,7 @@ image::images/lizard/02.png[]
 
 **(3) Return Modified Value:**
 
-Niech wszystkie metody, które wpływają w jakiś sposób na dane zwracają
+Niech wszystkie metody, które wpływają w jakiś sposób na dane, zwracają
 zmodyfikowaną wartość (return).
 
 image::images/code/code03.png[]
@@ -56,7 +54,7 @@ image::images/lizard/03.png[]
 
 **(4) Inline Variable:**
 
-Generalna Idea Przykładowo, jeśli metoda przed zwróceniem wartości przechowuje
+Przykładowo, jeśli metoda przed zwróceniem wartości przechowuje
 ją w zmiennej, której później do niczego nie używamy – zmienna nie jest nam
 potrzebna. Niech metoda od razu zwraca wartość, którą ma zwracać.
 
@@ -65,8 +63,8 @@ image::images/lizard/04.png[]
 
 **(5) Combine Functions into Class:**
 
-Wyodrębnić wszystkie "globalne punkty" jako osobną klasę "Punkt" zawierającą
-własny konstruktor i metody (przede wszystkim gettery i settery).
+Wyodrębnienie wszystkich "globalnych punktów" jako osobną klasę "Punkt"
+zawierającą własny konstruktor i metody (przede wszystkim gettery i settery).
 
 image::images/code/code05a.png[]
 image::images/code/code05b.png[]
@@ -91,24 +89,24 @@ Podsumować, że kod się poprawił, że jest lepszy, czytelniejszy i inne takie
 **Statystyki**
 
 [options="header"]
-|===========================================================
-| Etap                             | Liniki | Metody | Ratio
-| (0) Code to repair               | 27     | 1      | 27.00
-| (1) Rename Variable              | 27     | 1      | 27.00
-| (2) Extract Method               | 33     | 4      |  8.25
-| (3) Return Modified Value        | 27     | 4      |  6.75
-| (4) Inline Variable              | 24     | 4      |  6.00
-| (5) Combine Functions into Class | 37     | 11     |  3.36
-| (6) Add Line Class               | 54     | 17     |  3.18
-| (7) Open Close                   | 56     | 17     |  3.29
-| (8) Open Close 2                 | 55     | 17     |  3.24
-|===========================================================
+|============================================================
+| Step                             | Lines  | Methods | Ratio
+| (0) Code to repair               | 27     | 1       | 27.00
+| (1) Rename Variable              | 27     | 1       | 27.00
+| (2) Extract Method               | 33     | 4       |  8.25
+| (3) Return Modified Value        | 27     | 4       |  6.75
+| (4) Inline Variable              | 24     | 4       |  6.00
+| (5) Combine Functions into Class | 37     | 11      |  3.36
+| (6) Add Line Class               | 54     | 17      |  3.18
+| (7) Open Close                   | 56     | 17      |  3.29
+| (8) Open Close 2                 | 55     | 17      |  3.24
+|============================================================
 
 **Metryki CKJM**
 
 [options="header"]
 |======================================================================================================
-| Etap                             | Plik              | WMC | DIT | NOC | CBO | RFC | LCOM | Ca | NPM
+| Step                             | File              | WMC | DIT | NOC | CBO | RFC | LCOM | Ca | NPM
 | (0) Code to repair               | EuclideanDistance | 2   | 1   | 0   | 0   | 12  | 1    | 0  | 2
 | (1) Rename Variable              | EuclideanDistance | 2   | 1   | 0   | 0   | 12  | 1    | 0  | 2
 | (2) Extract Method               | EuclideanDistance | 5   | 1   | 0   | 0   | 15  | 2    | 0  | 5
