@@ -1,0 +1,14 @@
+Euclidean Distance rounded to 2 decimal places.
+P1 = (5.21, -7.32)
+P2 = (-0.13, 3.14)
+Distance between P1 and P2: 11.74
+P1 = (5.21, -7.32)
+P2 = (-4.71, -8.41)
+Distance between P1 and P2: 9.98
+P1 = (-0.13, 3.14)
+P2 = (-4.71, -8.41)
+Distance between P1 and P2: 12.42
+P1 = (5.21, -7.32)
+P2 = (-0.13, 3.14)
+P3 = (-4.71, -8.41)
+Distance between P1 and P2 and P3: 34.15
